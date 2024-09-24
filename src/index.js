@@ -1,32 +1,48 @@
-function askInfo() {
-    let playerName = prompt("diga o seu nome: ");
-    var rank = prompt("Digite quantos pontos você tem: (valor entre 0 e 4200+");
-}
+var rank = 0;
+var playerName = "";
 
-let nameText = ("Hi, " + playerName + ", your rank is ");
+function askInfo() {
+    playerName = prompt("diga o seu nome: ");
+};
+
+function addPoints() {
+    rank += 100;
+};
+
+function rmvPoints() {
+    if (rank <= 0) {     /* this doesn't allow the value of "rank" to be negative*/
+        rank = 0;
+    }else {
+        rank -= 100;
+    }
+};
 
 function playerRank() {
+
+    const nameText = ("Hi, " + playerName + ", your rank is ");
+    const text = document.getElementById("result").innerHTML;
+    
     if (rank >= 1 && rank <= 499) {
-        document.write(nameText + "Iron");
+        text = nameText + "Iron";
     }else if (rank >= 500 && rank <= 999) {
-        document.write(nameText + "Bronze");
+        text = nameText + "Bronze";
     }else if (rank >= 1000 && rank <= 1499) {
-        document.write(nameText + "Silver");
+        text = nameText + "Silver";
     }else if (rank >= 1500 && rank <= 1999) {
-        document.write(nameText + "Gold");
+        text = nameText + "Gold";
     }else if (rank >= 2000 && rank <= 2499) {
-        document.write(nameText + "Platinum");
+        text = nameText + "Platinum";
     }else if (rank >= 2500 && rank <= 2999) {
-        document.write(nameText + "Emerald");
+        text = nameText + "Emerald";
     }else if (rank >= 3000 && rank <= 3499) {
-        document.write(nameText + "Diamond");
+        text = nameText + "Diamond";
     }else if (rank >= 3500 && rank <= 3799) {
-        document.write(nameText + "Master");
+        text = nameText + "Master";
     }else if (rank >= 3800 && rank <= 4199) {
-        document.write(nameText + "Grand Master");
+        text = nameText + "Grand Master";
     }else if (rank >= 4200) {
-        document.write(nameText + "Challenger");
+        text = nameText + "Challenger";
     }else {
-    document.write(nameText + "unranked! let\'s play some games :3");
+    text = nameText + "unranked! let\'s play some games :3";
     }
 };

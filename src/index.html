@@ -7,15 +7,18 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
     </head>
     <body>
         <main>
             <div id="formStructure">
-                <h1>Consultador de Elo (beta)</h1><br>
-                <button onclick="askInfo()">Clique Aqui!!</button>
+                <h1>LOL Elo Simulator (beta)</h1><br>
+                <button class="nick" onclick="askInfo()">Set nickname</button>
+                <button class="add" onclick="addPoints()" disabled>ADD 100 POINTS</button>
+                <button class="rmv" onclick="rmvPoints()" disabled>REMOVE 100 POINTS</button><br><br>
+                <p id="result">Hello Player, Insert your name first, please!</p>
             </div>
         </main>
         <br>
-        <script src="index.js"></script>
     </body>
 </html>

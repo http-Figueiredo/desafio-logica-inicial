@@ -1,4 +1,15 @@
+/* This code is not responsive yet :) */
+
 * {
-    margin: 2px;
-    padding: 2px;
+    margin: 1px;
+    padding: 1px;
+}
+button {
+    display: inline-flex;
+    margin: 5px;
+    height: 50px;
+    align-items: center;
+}
+p {
+    margin: 5px;
 }
