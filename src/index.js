@@ -1,12 +1,26 @@
 var rank = 0;
 var playerName = "";
+var rankName = "";
+let text = "";
+let img = null;
 
 function askInfo() {
-    playerName = prompt("diga o seu nome: ");
+    playerName = prompt("Tell us how you're called: ");
+    playerRank();
+    if (playerName){
+        text = document.getElementById("result").innerHTML = "Hi " + playerName + ", you have " + rank + " points and your rank is " + rankName;
+
+        document.querySelector(".add").disabled = false;
+        document.querySelector(".rmv").disabled = false;
+        document.querySelector(".nick").disabled = true;
+    } else {
+        document.getElementById("result").innerHTML = "Invalid Nickname, try again!";
+    };
 };
 
 function addPoints() {
     rank += 100;
+    playerRank();
 };
 
 function rmvPoints() {
@@ -14,35 +28,35 @@ function rmvPoints() {
         rank = 0;
     }else {
         rank -= 100;
-    }
+    };
+    playerRank();
 };
 
 function playerRank() {
-
-    const nameText = ("Hi, " + playerName + ", your rank is ");
-    const text = document.getElementById("result").innerHTML;
     
-    if (rank >= 1 && rank <= 499) {
-        text = nameText + "Iron";
-    }else if (rank >= 500 && rank <= 999) {
-        text = nameText + "Bronze";
-    }else if (rank >= 1000 && rank <= 1499) {
-        text = nameText + "Silver";
-    }else if (rank >= 1500 && rank <= 1999) {
-        text = nameText + "Gold";
-    }else if (rank >= 2000 && rank <= 2499) {
-        text = nameText + "Platinum";
-    }else if (rank >= 2500 && rank <= 2999) {
-        text = nameText + "Emerald";
-    }else if (rank >= 3000 && rank <= 3499) {
-        text = nameText + "Diamond";
-    }else if (rank >= 3500 && rank <= 3799) {
-        text = nameText + "Master";
-    }else if (rank >= 3800 && rank <= 4199) {
-        text = nameText + "Grand Master";
-    }else if (rank >= 4200) {
-        text = nameText + "Challenger";
+    if (rank >= 1 && rank <= 399) {
+        rankName = "Iron";
+    }else if (rank >= 400 && rank <= 799) {
+        rankName = "Bronze";
+    }else if (rank >= 800 && rank <= 1199) {
+        rankName = "Silver";
+    }else if (rank >= 1200 && rank <= 1599) {
+        rankName = "Gold";
+    }else if (rank >= 1600 && rank <= 1999) {
+        rankName = "Platinum";
+    }else if (rank >= 2000 && rank <= 2399) {
+        rankName = "Emerald";
+    }else if (rank >= 2400 && rank <= 2799) {
+        rankName = "Diamond";
+    }else if (rank >= 2800 && rank <= 2999) {
+        rankName = "Master";
+    }else if (rank >= 3000 && rank <= 3199) {
+        rankName = "Grand Master";
+    }else if (rank >= 3200) {
+        rankName = "Challenger";
     }else {
-    text = nameText + "unranked! let\'s play some games :3";
-    }
+        rankName = "Unranked! let\'s play some games :3";
+    };
+
+    text = document.getElementById("result").innerHTML = "Hi " + playerName + ", you have " + rank + " points and your rank is " + rankName + " " + img;
 };

@@ -3,20 +3,24 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <meta name="author" content="http.figueiredo">
+        <meta name="description" content="Lol elo simulator">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
         <script src="index.js"></script>
+        <title>Elo Simulator (beta)</title>
+        <link rel="icon" type="icon/X-image" href="/imgs/favicons/logo.ico">
     </head>
     <body>
         <main>
-            <div id="formStructure">
+            <div class="image"></div>
+            <div id="tabelinha">
                 <h1>LOL Elo Simulator (beta)</h1><br>
-                <button class="nick" onclick="askInfo()">Set nickname</button>
-                <button class="add" onclick="addPoints()" disabled>ADD 100 POINTS</button>
-                <button class="rmv" onclick="rmvPoints()" disabled>REMOVE 100 POINTS</button><br><br>
-                <p id="result">Hello Player, Insert your name first, please!</p>
+                <button class="nick" onclick="askInfo()">Insert nickname</button>
+                <button class="add" onclick="addPoints()" disabled>Add 100 points</button>
+                <button class="rmv" onclick="rmvPoints()" disabled>Remove 100 points</button><br><br>
+                <p id="result">Hello Player, Insert your name first, please!<img class="image" src=""></p>
+                <p class="warning">Note. You rank up every 400 points (Master to GM is 200 and GM to Challenger is 200 more) <br> and after challenger your points can go up infinitely.</p>
             </div>
         </main>
         <br>

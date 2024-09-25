@@ -1,15 +1,51 @@
 /* This code is not responsive yet :) */
 
 * {
-    margin: 1px;
-    padding: 1px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(/imgs/content-original-championillustrations-group-slashes-9828cf13cecf88fb9f21ee17afa6874e.jpg);
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+}
+#tabelinha{
+    background: linear-gradient(to bottom, purple, black); /* Gradiente de roxo a preto */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 20px 15px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: white;
 }
 button {
     display: inline-flex;
     margin: 5px;
     height: 50px;
     align-items: center;
+    padding: 10px;
 }
+
 p {
     margin: 5px;
+    color: #fff;
+    padding-bottom: 20px;
+}
+.warning {
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: #f6f;
 }
